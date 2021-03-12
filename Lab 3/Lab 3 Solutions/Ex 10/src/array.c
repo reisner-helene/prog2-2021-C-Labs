@@ -10,14 +10,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#include "array.h"
+#include "../headers/array.h"
 
 /*
  * This function fills an array of given size with random numbers between 0 and 99.
  */
 void fill_array(int array[], int size) {
 	for(int i = 0; i < size; i++)
-		array[i] = rand() % 100;
+		array[i] = rand() % 100;        //just take the random number, the rest of the division with 100... the number is 0 and 99
 }
 
 /*
@@ -31,7 +31,7 @@ void sort_array(int array[], int size) {
 		minIndex = i;
 		for(int j = i; j < size; j++) {
 			if(array[j] < array[minIndex]) {
-				minIndex = j;
+				minIndex = j; //you take some number and if you find something that is smaller, switch
 			}
 		}
 
